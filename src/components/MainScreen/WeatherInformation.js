@@ -1,4 +1,5 @@
-import styles from "./WeatherInformation.module.css";
+import { Link } from "react-router-dom";
+
 import {
   WiDayCloudy,
   WiDirectionUp,
@@ -13,15 +14,17 @@ import {
 } from "react-icons/wi";
 import { MdPlace } from "react-icons/md";
 
+import styles from "./WeatherInformation.module.css";
+
 const WeatherInformation = (props) => {
   return (
     <div className={styles.information}>
       <header className={styles.header}>
         <p>Wednesday, 08 Oct 2020 | 4:30PM</p>
-        <a href="/">
+        <Link to="/search">
           Kosice, Slovakia
           <MdPlace />
-        </a>
+        </Link>
       </header>
 
       <div className={styles.main}>
