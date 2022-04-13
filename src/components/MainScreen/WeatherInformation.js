@@ -9,7 +9,7 @@ import {
   WiSunrise,
   WiSunset,
   WiTime3,
-  WiCelsius,
+  // WiCelsius,
 } from "react-icons/wi";
 
 const WeatherInformation = (props) => {
