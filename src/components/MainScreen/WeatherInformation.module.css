@@ -7,8 +7,10 @@
   gap: 2rem;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  overflow: hidden;
-  padding-bottom: 2rem;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 4rem;
 }
 
 .header {
