@@ -11,13 +11,17 @@ import {
   WiTime3,
   // WiCelsius,
 } from "react-icons/wi";
+import { MdPlace } from "react-icons/md";
 
 const WeatherInformation = (props) => {
   return (
     <div className={styles.information}>
       <header className={styles.header}>
         <p>Wednesday, 08 Oct 2020 | 4:30PM</p>
-        <a href="/">Kosice, Slovakia</a>
+        <a href="/">
+          Kosice, Slovakia
+          <MdPlace />
+        </a>
       </header>
 
       <div className={styles.main}>
