@@ -1,12 +1,17 @@
 import styles from "./Search.module.css";
 
+import { MdPlace } from "react-icons/md";
+
 const Search = (props) => {
   return (
     <div className={styles.search}>
       <h2>Location</h2>
 
       <form>
-        <input placeholder="Search city ..." />
+        <div>
+          <input placeholder="Search city ..." />
+          <MdPlace className={styles.icon} />
+        </div>
       </form>
 
       <div className={styles.cities}>
