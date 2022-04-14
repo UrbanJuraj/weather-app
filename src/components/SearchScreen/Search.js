@@ -1,6 +1,6 @@
+import Form from "./Form/Form";
 import styles from "./Search.module.css";
 
-import { MdPlace } from "react-icons/md";
 import SearchedCity from "./SearchedCity/SearchedCity";
 
 const Search = (props) => {
@@ -8,12 +8,7 @@ const Search = (props) => {
     <main className={styles.search}>
       <h2>Location</h2>
 
-      <form>
-        <div>
-          <input placeholder="Search city ..." />
-          <MdPlace className={styles.icon} />
-        </div>
-      </form>
+      <Form />
 
       <div className={styles.cities}>
         <SearchedCity city="Bratislava" temperature="35" />
