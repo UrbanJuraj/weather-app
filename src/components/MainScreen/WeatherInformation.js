@@ -93,14 +93,14 @@ const WeatherInformation = (props) => {
           <p className={styles.text}>Thu, 09</p>
 
           <div className={styles.numbers}>
-            <p className={styles.temperatures}>
+            <div className={styles.temperatures}>
               <p>35&deg;C</p>
               <WiDirectionUp />
-            </p>
-            <p className={styles.temperatures}>
+            </div>
+            <div className={styles.temperatures}>
               <p>27&deg;C</p>
               <WiDirectionDown />
-            </p>
+            </div>
           </div>
         </div>
 
@@ -109,14 +109,14 @@ const WeatherInformation = (props) => {
           <p className={styles.text}>Fri, 10</p>
 
           <div className={styles.numbers}>
-            <p className={styles.temperatures}>
+            <div className={styles.temperatures}>
               <p>35&deg;C</p>
               <WiDirectionUp />
-            </p>
-            <p className={styles.temperatures}>
+            </div>
+            <div className={styles.temperatures}>
               <p>27&deg;C</p>
               <WiDirectionDown />
-            </p>
+            </div>
           </div>
         </div>
 
@@ -125,14 +125,14 @@ const WeatherInformation = (props) => {
           <p className={styles.text}>Sat, 11</p>
 
           <div className={styles.numbers}>
-            <p className={styles.temperatures}>
+            <div className={styles.temperatures}>
               <p>35&deg;C</p>
               <WiDirectionUp />
-            </p>
-            <p className={styles.temperatures}>
+            </div>
+            <div className={styles.temperatures}>
               <p>27&deg;C</p>
               <WiDirectionDown />
-            </p>
+            </div>
           </div>
         </div>
       </div>
