@@ -5,9 +5,9 @@ import Temperature from "./Temperature/Temperature";
 import TempDiff from "./TemperatureDifference/TempDiff";
 import Weather from "./Weather/Weather";
 
-import styles from "./WeatherInformation.module.css";
+import styles from "./MainScreen.module.css";
 
-const WeatherInformation = (props) => {
+const MainScreen = (props) => {
   return (
     <main className={styles.information}>
       <Header />
@@ -36,4 +36,4 @@ const WeatherInformation = (props) => {
   );
 };
 
-export default WeatherInformation;
+export default MainScreen;
