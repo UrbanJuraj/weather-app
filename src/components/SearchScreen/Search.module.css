@@ -53,19 +53,4 @@ form input {
   width: 85%;
 }
 
-.city {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.city-name {
-  font-size: 1.8rem;
-  color: #444;
-}
-
-.degree {
-  font-size: 1.6rem;
-  font-weight: 300;
-  color: #666;
-}

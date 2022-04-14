@@ -1,10 +1,11 @@
 import styles from "./Search.module.css";
 
 import { MdPlace } from "react-icons/md";
+import SearchedCity from "./SearchedCity/SearchedCity";
 
 const Search = (props) => {
   return (
-    <div className={styles.search}>
+    <main className={styles.search}>
       <h2>Location</h2>
 
       <form>
@@ -15,37 +16,14 @@ const Search = (props) => {
       </form>
 
       <div className={styles.cities}>
-        <div className={styles.city}>
-          <p className={styles["city-name"]}>Bratislava</p>
-          <p className={styles.degree}>35&deg;C</p>
-        </div>
-
-        <div className={styles.city}>
-          <p className={styles["city-name"]}>Humenne</p>
-          <p className={styles.degree}>35&deg;C</p>
-        </div>
-
-        <div className={styles.city}>
-          <p className={styles["city-name"]}>Koromla</p>
-          <p className={styles.degree}>35&deg;C</p>
-        </div>
-
-        <div className={styles.city}>
-          <p className={styles["city-name"]}>Kosice</p>
-          <p className={styles.degree}>35&deg;C</p>
-        </div>
-
-        <div className={styles.city}>
-          <p className={styles["city-name"]}>Michalovce</p>
-          <p className={styles.degree}>35&deg;C</p>
-        </div>
-
-        <div className={styles.city}>
-          <p className={styles["city-name"]}>Sobrance</p>
-          <p className={styles.degree}>35&deg;C</p>
-        </div>
+        <SearchedCity city="Bratislava" temperature="35" />
+        <SearchedCity city="Humenne" temperature="35" />
+        <SearchedCity city="Koromla" temperature="35" />
+        <SearchedCity city="Kosice" temperature="35" />
+        <SearchedCity city="Michalovce" temperature="35" />
+        <SearchedCity city="Sobrance" temperature="35" />
       </div>
-    </div>
+    </main>
   );
 };
 
