@@ -1,0 +1,15 @@
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sunny {
+  font-size: 4.4rem;
+  color: #aaa;
+}
+
+.weather p {
+  font-size: 1.8rem;
+}

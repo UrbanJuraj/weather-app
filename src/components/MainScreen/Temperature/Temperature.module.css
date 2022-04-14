@@ -1,0 +1,15 @@
+.temperature {
+  display: flex;
+  justify-content: center;
+}
+
+.number {
+  font-size: 6.4rem;
+  font-weight: 300;
+}
+
+.celsius {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #666;
+}

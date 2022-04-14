@@ -13,30 +13,6 @@
   padding-bottom: 4rem;
 }
 
-.header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header p {
-  color: #999;
-  padding: 1.5rem 0 1.5rem 0.5rem;
-  font-size: 1.4rem;
-}
-
-.header a:link,
-.header a:visited {
-  font-size: 1.6rem;
-  text-decoration: none;
-  color: #0da0ea;
-  font-weight: 500;
-  background-color: #0d9fea14;
-  padding: 1.5rem 1rem;
-  border-bottom-left-radius: 25px;
-}
-
 /* main information----------------------------------- */
 .main {
   width: 85%;
@@ -46,105 +22,17 @@
   row-gap: 4rem;
   column-gap: 2rem;
 }
-
-.weather {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.sunny {
-  font-size: 4.4rem;
-  color: #aaa;
-}
-
-.weather p {
-  font-size: 1.8rem;
-}
 /*  */
-.temperature {
-  display: flex;
-  justify-content: center;
-}
 
-.number {
-  font-size: 6.4rem;
-  font-weight: 300;
-}
-
-.celsius {
-  font-size: 2.4rem;
-  font-weight: 500;
-  color: #666;
-}
 /*  */
-.range {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  font-size: 1.6rem;
-  color: #666;
-}
 
-.range div {
-  display: flex;
-}
 /*  */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
 
-.logo {
-  font-size: 3.6rem;
-  color: #aaa;
-}
-
-.text {
-  color: #444;
-  font-size: 1.6rem;
-  font-weight: 500;
-}
-
-.title {
-  color: #999;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
 /* --------------------------------------------------- */
 /* next days------------------------------------------ */
 .next-days {
   display: flex;
   justify-content: space-between;
   width: 90%;
-}
-
-.content {
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 10rem;
-  height: 10rem;
-  gap: 1rem;
-}
-
-.numbers {
-  display: flex;
-  flex-direction: row;
-}
-
-.temperatures {
-  display: flex;
-  color: #999;
-  font-size: 0.8rem;
-  font-weight: 500;
 }
 /* --------------------------------------------------- */
