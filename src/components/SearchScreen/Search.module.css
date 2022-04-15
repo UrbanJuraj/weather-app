@@ -27,12 +27,8 @@
   width: 85%;
 }
 
-form {
+.input {
   width: 90%;
-}
-
-form div {
-  width: 100%;
   padding: 1rem;
   background-color: #f3f3f3;
   display: flex;
@@ -41,7 +37,7 @@ form div {
   border-radius: 5px;
 }
 
-form input {
+.input input {
   font-size: 1.8rem;
   background-color: inherit;
   border: none;

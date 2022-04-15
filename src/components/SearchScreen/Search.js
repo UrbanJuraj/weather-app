@@ -38,8 +38,7 @@ const Search = () => {
     <main className={styles.search}>
       <h2>Location</h2>
 
-      <form>
-        <div>
+        <div className={styles.input}>
           <input
             placeholder="Search city ..."
             onChange={onChangeHandler}
@@ -47,7 +46,6 @@ const Search = () => {
           />
           <MdPlace className={styles.icon} />
         </div>
-      </form>
 
       <div className={styles.cities}>{citiesJsx}</div>
     </main>
