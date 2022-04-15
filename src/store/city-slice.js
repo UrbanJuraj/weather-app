@@ -9,12 +9,7 @@ const citySlice = createSlice({
     temp: 0,
     max: 0,
     min: 0,
-    humidity: "",
-    pressure: "",
-    wind: "",
-    sunrise: "",
-    sunset: "",
-    daytime: "",
+    informations: [],
     nextDays: [],
   },
   reducers: {
@@ -25,12 +20,7 @@ const citySlice = createSlice({
       state.temp = action.payload.temp;
       state.max = action.payload.max;
       state.min = action.payload.min;
-      state.humidity = action.payload.humidity;
-      state.pressure = action.payload.pressure;
-      state.wind = action.payload.wind;
-      state.sunrise = action.payload.sunrise;
-      state.sunset = action.payload.sunset;
-      state.daytime = action.payload.daytime;
+      state.informations = action.payload.informations;
       state.nextDays = action.payload.nextDays;
     },
   },
