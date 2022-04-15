@@ -10,14 +10,24 @@ import {
 import styles from "./Information.module.css";
 
 const Information = (props) => {
+  let icon;
+
+  if (props.title.includes("Humidity"))
+    icon = <WiHumidity className={styles.icon} />;
+  else if (props.title.includes("Pressure"))
+    icon = <WiBarometer className={styles.icon} />;
+  else if (props.title.includes("Wind"))
+    icon = <WiStrongWind className={styles.icon} />;
+  else if (props.title.includes("Sunrise"))
+    icon = <WiSunrise className={styles.icon} />;
+  else if (props.title.includes("Sunset"))
+    icon = <WiSunset className={styles.icon} />;
+  else if (props.title.includes("Daytime"))
+    icon = <WiTime3 className={styles.icon} />;
+
   return (
     <div className={styles.container}>
-      {props.title === "Humidity" && <WiHumidity className={styles.logo} />}
-      {props.title === "Pressure" && <WiBarometer className={styles.logo} />}
-      {props.title === "Wind" && <WiStrongWind className={styles.logo} />}
-      {props.title === "Sunrise" && <WiSunrise className={styles.logo} />}
-      {props.title === "Sunset" && <WiSunset className={styles.logo} />}
-      {props.title === "Daytime" && <WiTime3 className={styles.logo} />}
+      {icon}
       <p className={styles.text}>{props.text}</p>
       <p className={styles.title}>{props.title}</p>
     </div>
