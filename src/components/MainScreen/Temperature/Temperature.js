@@ -1,11 +1,14 @@
+import { useSelector } from "react-redux";
+
 import styles from "./Temperature.module.css";
 
 const Temperature = (props) => {
+  const temp = useSelector((state) => state.city.temp);
+
   return (
     <div className={styles.temperature}>
-      <p className={styles.number}>33</p>
+      <p className={styles.number}>{temp}</p>
       <p className={styles.celsius}>&deg;C</p>
-      {/* <WiCelsius className={styles.celsius} /> */}
     </div>
   );
 };
