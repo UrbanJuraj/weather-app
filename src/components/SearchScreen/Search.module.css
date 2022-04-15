@@ -26,3 +26,29 @@
   gap: 1rem;
   width: 85%;
 }
+
+form {
+  width: 90%;
+}
+
+form div {
+  width: 100%;
+  padding: 1rem;
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+form input {
+  font-size: 1.8rem;
+  background-color: inherit;
+  border: none;
+  font-style: italic;
+  width: 90%;
+}
+
+.icon {
+  font-size: 1.6rem;
+}
