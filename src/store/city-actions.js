@@ -11,7 +11,7 @@ const convertUnixToDateString = (unixTime) => {
 
 const convertUnixToTimeString = (unixTime) => {
   const date = new Date(unixTime * 1000);
-  const time = date.toLocaleTimeString;
+  const time = date.toLocaleTimeString();
 
   return time.slice(0, 4);
 };
