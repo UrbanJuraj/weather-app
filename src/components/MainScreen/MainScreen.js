@@ -1,37 +1,48 @@
-import Header from "./Header/Header";
-import Information from "./Information/Information";
-import NextDay from "./NextDay/NextDay";
-import Temperature from "./Temperature/Temperature";
 import TempDiff from "./TemperatureDifference/TempDiff";
+import Temperature from "./Temperature/Temperature";
+import Information from "./Information/Information";
+import Header from "./Header/Header";
+import NextDay from "./NextDay/NextDay";
 import Weather from "./Weather/Weather";
+
+import { useSelector } from "react-redux";
 
 import styles from "./MainScreen.module.css";
 
-const MainScreen = (props) => {
+const MainScreen = () => {
+  const informations = useSelector((state) => state.city.informations);
+  const nextDays = useSelector((state) => state.city.nextDays);
+
+  const informationsJsx = informations.map((information) => (
+    <Information
+      key={information.title}
+      title={information.title}
+      text={information.text}
+    />
+  ));
+
+  const nextDaysJsx = nextDays.map((day) => (
+    <NextDay
+      key={day.day}
+      weather={day.weather}
+      day={day.day}
+      max={day.max}
+      min={day.min}
+    />
+  ));
+
   return (
     <main className={styles.information}>
       <Header />
 
       <div className={styles.main}>
         <Weather />
-
         <Temperature />
-
         <TempDiff />
-
-        <Information title="Humidity" text="49%" />
-        <Information title="Pressure" text="1,007mBar" />
-        <Information title="Wind" text="23 km/h" />
-        <Information title="Sunrise" text="6:03 AM" />
-        <Information title="Sunset" text="7:05 PM" />
-        <Information title="Daytime" text="13h 1m" />
+        {informationsJsx}
       </div>
 
-      <div className={styles["next-days"]}>
-        <NextDay day="Thu, 09" max="35" min="28" />
-        <NextDay day="Fri, 10" max="35" min="27" />
-        <NextDay day="Sat, 11" max="34" min="29" />
-      </div>
+      <div className={styles["next-days"]}>{nextDaysJsx}</div>
     </main>
   );
 };
