@@ -4,7 +4,7 @@ import { MdPlace } from "react-icons/md";
 
 import SearchedCity from "./SearchedCity/SearchedCity";
 
-import styles from "./Search.module.css";
+import styles from "./SearchScreen.module.css";
 
 const Search = () => {
   const [filteredCities, setFilteredCities] = useState([]);
@@ -38,14 +38,14 @@ const Search = () => {
     <main className={styles.search}>
       <h2>Location</h2>
 
-        <div className={styles.input}>
-          <input
-            placeholder="Search city ..."
-            onChange={onChangeHandler}
-            ref={userInputRef}
-          />
-          <MdPlace className={styles.icon} />
-        </div>
+      <div className={styles.input}>
+        <input
+          placeholder="Search city ..."
+          onChange={onChangeHandler}
+          ref={userInputRef}
+        />
+        <MdPlace className={styles.icon} />
+      </div>
 
       <div className={styles.cities}>{citiesJsx}</div>
     </main>
