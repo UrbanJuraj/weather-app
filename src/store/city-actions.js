@@ -40,27 +40,27 @@ export const fetchCityWeather = () => {
 
       const informations = [
         {
-          title: "humidity",
+          title: "Humidity",
           text: data.current.humidity.toString() + "%",
         },
         {
-          title: "pressure",
+          title: "Pressure",
           text: data.current.pressure.toString() + "mBar",
         },
         {
-          title: "wind",
+          title: "Wind",
           text: (data.current.wind_speed * 3.6).toString() + " km/h",
         },
         {
-          title: "sunrise",
+          title: "Sunrise",
           text: convertUnixToTimeString(data.current.sunrise) + "AM",
         },
         {
-          title: "sunset",
+          title: "Sunset",
           text: convertUnixToTimeString(data.current.sunset) + "PM",
         },
         {
-          title: "daytime",
+          title: "Daytime",
           text: convertUnixToDaytimeString(
             data.current.sunset,
             data.current.sunrise
