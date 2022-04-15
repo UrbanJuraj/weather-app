@@ -1,5 +1,14 @@
 import { cityActions } from "./city-slice";
 
+const convertCoordinatesToCityName = (lat, lon) => {
+  if (lat === 48.7543 && lon === 21.9195) return "Michalovce, Slovakia";
+  if (lat === 48.7445 && lon === 22.1814) return "Sobrance, Slovakia";
+  if (lat === 48.7445 && lon === 22.1814) return "Koromľa, Slovakia";
+  if (lat === 48.6667 && lon === 21.3333) return "Košice, Slovakia";
+  if (lat === 48.9371 && lon === 21.9163) return "Humenné, Slovakia";
+  if (lat === 48.1482 && lon === 17.1067) return "Bratislava, Slovakia";
+};
+
 const convertUnixToDateString = (unixTime) => {
   const date = new Date(unixTime * 1000);
   const utcDateString = date.toUTCString();
@@ -79,7 +88,7 @@ export const fetchCityWeather = (lat, lon) => {
       }
 
       const weatherData = {
-        city: "Michalovce, Slovakia",
+        city: convertCoordinatesToCityName(lat, lon),
         date: convertUnixToDateString(data.current.dt),
         weather: data.current.weather[0].main,
         temp: Math.round(data.current.temp),
