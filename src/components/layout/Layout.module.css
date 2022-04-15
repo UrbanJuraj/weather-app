@@ -1,7 +1,5 @@
 .layout {
-  background-image: url("../../assets/background.jpg");
-  background-size: contain;
-  background-position: center;
+  background: linear-gradient(to right, #54b4f9 5.67%, #c4e6ff 127%);
   width: 100%;
   min-height: 100vh;
   position: relative;
