@@ -38,6 +38,36 @@ export const fetchCityWeather = () => {
 
       const data = await response.json();
 
+      const informations = [
+        {
+          title: "humidity",
+          text: data.current.humidity.toString() + "%",
+        },
+        {
+          title: "pressure",
+          text: data.current.pressure.toString() + "mBar",
+        },
+        {
+          title: "wind",
+          text: (data.current.wind_speed * 3.6).toString() + " km/h",
+        },
+        {
+          title: "sunrise",
+          text: convertUnixToTimeString(data.current.sunrise) + "AM",
+        },
+        {
+          title: "sunset",
+          text: convertUnixToTimeString(data.current.sunset) + "PM",
+        },
+        {
+          title: "daytime",
+          text: convertUnixToDaytimeString(
+            data.current.sunset,
+            data.current.sunrise
+          ),
+        },
+      ];
+
       const nextDays = [];
       for (let i = 1; i < 4; i++) {
         nextDays.push({
@@ -55,15 +85,7 @@ export const fetchCityWeather = () => {
         temp: Math.round(data.current.temp),
         max: Math.round(data.daily[0].temp.max),
         min: Math.round(data.daily[0].temp.min),
-        humidity: data.current.humidity.toString() + "%",
-        pressure: data.current.pressure.toString() + "mBar",
-        wind: (data.current.wind_speed * 3.6).toString() + " km/h",
-        sunrise: convertUnixToTimeString(data.current.sunrise) + "AM",
-        sunset: convertUnixToTimeString(data.current.sunset) + "PM",
-        daytime: convertUnixToDaytimeString(
-          data.current.sunset,
-          data.current.sunrise
-        ),
+        informations,
         nextDays,
       };
 
@@ -80,12 +102,7 @@ export const fetchCityWeather = () => {
           temp: weatherData.temp,
           max: weatherData.max,
           min: weatherData.min,
-          humidity: weatherData.humidity,
-          pressure: weatherData.pressure,
-          wind: weatherData.wind,
-          sunrise: weatherData.sunrise,
-          sunset: weatherData.sunset,
-          daytime: weatherData.daytime,
+          informations: weatherData.informations,
           nextDays: weatherData.nextDays,
         })
       );
