@@ -20,9 +20,12 @@ const convertUnixToDateString = (unixTime) => {
 
 const convertUnixToTimeString = (unixTime) => {
   const date = new Date(unixTime * 1000);
-  const time = date.toLocaleTimeString();
+  const time = date.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+  });
 
-  return time.slice(0, 4);
+  return time;
 };
 
 const convertUnixToDaytimeString = (sunset, sunrise) => {
@@ -58,15 +61,15 @@ export const fetchCityWeather = (lat, lon) => {
         },
         {
           title: "Wind",
-          text: (data.current.wind_speed * 3.6).toString() + " km/h",
+          text: (data.current.wind_speed * 3.6).toFixed(1).toString() + " km/h",
         },
         {
           title: "Sunrise",
-          text: convertUnixToTimeString(data.current.sunrise) + "AM",
+          text: convertUnixToTimeString(data.current.sunrise),
         },
         {
           title: "Sunset",
-          text: convertUnixToTimeString(data.current.sunset) + "PM",
+          text: convertUnixToTimeString(data.current.sunset),
         },
         {
           title: "Daytime",
