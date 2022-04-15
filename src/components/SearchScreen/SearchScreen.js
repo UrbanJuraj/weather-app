@@ -30,7 +30,6 @@ const SearchScreen = () => {
       city={city.name}
       lat={city.lat}
       lon={city.lon}
-      temperature="39"
     />
   ));
 
