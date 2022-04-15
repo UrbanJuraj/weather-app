@@ -2,9 +2,11 @@ import { cityActions } from "./city-slice";
 
 const convertUnixToDateString = (unixTime) => {
   const date = new Date(unixTime * 1000);
-  const dateString = date.toUTCString();
+  const utcDateString = date.toUTCString();
+  const dateString =
+    utcDateString.slice(0, 16) + " |" + utcDateString.slice(16);
 
-  return dateString.slice(0, 22);
+  return dateString.slice(0, 24);
 };
 
 const convertUnixToTimeString = (unixTime) => {
@@ -36,6 +38,16 @@ export const fetchCityWeather = () => {
 
       const data = await response.json();
 
+      const nextDays = [];
+      for (let i = 1; i < 4; i++) {
+        nextDays.push({
+          weather: data.daily[i].weather[0].main,
+          max: Math.round(data.daily[i].temp.max),
+          min: Math.round(data.daily[i].temp.min),
+          day: convertUnixToDateString(data.daily[i].dt).slice(0, 7),
+        });
+      }
+
       const weatherData = {
         city: "Michalovce, Slovakia",
         date: convertUnixToDateString(data.current.dt),
@@ -52,6 +64,7 @@ export const fetchCityWeather = () => {
           data.current.sunset,
           data.current.sunrise
         ),
+        nextDays,
       };
 
       return weatherData;
