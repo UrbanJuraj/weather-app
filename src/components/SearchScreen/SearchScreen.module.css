@@ -23,7 +23,7 @@
 .cities {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.4rem;
   width: 85%;
 }
 
