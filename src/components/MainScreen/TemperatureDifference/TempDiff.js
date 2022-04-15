@@ -1,5 +1,6 @@
-import { WiDirectionUp, WiDirectionDown } from "react-icons/wi";
 import { useSelector } from "react-redux";
+
+import { WiDirectionUp, WiDirectionDown } from "react-icons/wi";
 
 import styles from "./TempDiff.module.css";
 

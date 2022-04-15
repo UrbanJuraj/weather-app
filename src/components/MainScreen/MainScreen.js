@@ -1,11 +1,11 @@
+import { useSelector } from "react-redux";
+
 import TempDiff from "./TemperatureDifference/TempDiff";
 import Temperature from "./Temperature/Temperature";
 import Information from "./Information/Information";
 import Header from "./Header/Header";
 import NextDay from "./NextDay/NextDay";
 import Weather from "./Weather/Weather";
-
-import { useSelector } from "react-redux";
 
 import styles from "./MainScreen.module.css";
 

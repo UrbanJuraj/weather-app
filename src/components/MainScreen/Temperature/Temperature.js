@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 
 import styles from "./Temperature.module.css";
 
-const Temperature = (props) => {
+const Temperature = () => {
   const temp = useSelector((state) => state.city.temp);
 
   return (

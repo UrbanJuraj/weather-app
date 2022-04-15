@@ -13,7 +13,6 @@
   padding-bottom: 4rem;
 }
 
-/* main information----------------------------------- */
 .main {
   width: 85%;
   display: grid;
@@ -22,17 +21,9 @@
   row-gap: 4rem;
   column-gap: 2rem;
 }
-/*  */
 
-/*  */
-
-/*  */
-
-/* --------------------------------------------------- */
-/* next days------------------------------------------ */
 .next-days {
   display: flex;
   justify-content: space-between;
   width: 90%;
 }
-/* --------------------------------------------------- */
