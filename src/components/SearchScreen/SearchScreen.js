@@ -6,7 +6,7 @@ import SearchedCity from "./SearchedCity/SearchedCity";
 
 import styles from "./SearchScreen.module.css";
 
-const Search = () => {
+const SearchScreen = () => {
   const [filteredCities, setFilteredCities] = useState([]);
   const [isSearched, setIsSearched] = useState(false);
   const userInputRef = useRef();
@@ -52,7 +52,7 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchScreen;
 
 const cities = [
   {
