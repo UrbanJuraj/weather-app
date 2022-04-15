@@ -1,16 +1,20 @@
 import { WiDirectionUp, WiDirectionDown } from "react-icons/wi";
+import { useSelector } from "react-redux";
 
 import styles from "./TempDiff.module.css";
 
-const TempDiff = (props) => {
+const TempDiff = () => {
+  const max = useSelector((state) => state.city.max);
+  const min = useSelector((state) => state.city.min);
+
   return (
     <div className={styles.range}>
       <div>
-        <p>35&deg;C</p>
+        <p>{max}&deg;C</p>
         <WiDirectionUp />
       </div>
       <div>
-        <p>27&deg;C</p>
+        <p>{min}&deg;C</p>
         <WiDirectionDown />
       </div>
     </div>
