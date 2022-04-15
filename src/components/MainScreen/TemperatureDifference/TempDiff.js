@@ -11,7 +11,7 @@ const TempDiff = () => {
     <div className={styles.range}>
       <div>
         <p>{max}&deg;C</p>
-        <WiDirectionUp />
+        <WiDirectionUp className={styles.icon} />
       </div>
       <div>
         <p>{min}&deg;C</p>
