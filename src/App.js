@@ -7,6 +7,7 @@ import { fetchCityWeather } from "./store/city-actions";
 import Layout from "./components/layout/Layout";
 import MainScreen from "./components/MainScreen/MainScreen";
 import SearchScreen from "./components/SearchScreen/SearchScreen";
+import NotFound from "./components/NotFoundScreen/NotFoundScreen";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainScreen />} />
         <Route path="search" element={<SearchScreen />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
   );
