@@ -17,7 +17,6 @@ const SearchedCity = (props) => {
   return (
     <div className={styles.city} onClick={onClickHandler}>
       <p className={styles["city-name"]}>{props.city}</p>
-      <p className={styles.degree}>{props.temperature}&deg;C</p>
     </div>
   );
 };
