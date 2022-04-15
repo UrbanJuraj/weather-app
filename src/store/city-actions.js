@@ -27,12 +27,12 @@ const convertUnixToDaytimeString = (sunset, sunrise) => {
   return `${daytimeHours}h ${daytimeMinutes}m`;
 };
 
-export const fetchCityWeather = () => {
+export const fetchCityWeather = (lat, lon) => {
+  const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=hourly,minutely&appid=1521bd0a1b63eeefeab43df4bec8bfce`;
+
   return async (dispatch) => {
     const fetchData = async () => {
-      const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=48.7543&lon=21.9195&units=metric&exclude=hourly,minutely&appid=1521bd0a1b63eeefeab43df4bec8bfce`
-      );
+      const response = await fetch(url);
 
       if (!response.ok) throw new Error("Could not fetch weather data!");
 
