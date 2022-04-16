@@ -24,3 +24,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.failed-fetch {
+  background: linear-gradient(to bottom, #c74343, #e6a7a7);
+  min-height: 100vh;
+}
