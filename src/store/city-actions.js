@@ -1,4 +1,5 @@
 import { cityActions } from "./city-slice";
+import { uiActions } from "./ui-slice";
 
 const convertCoordinatesToCityName = (lat, lon) => {
   if (lat === 48.7543 && lon === 21.9195) return "Michalovce, Slovakia";
@@ -46,7 +47,7 @@ export const fetchCityWeather = (lat, lon) => {
     const fetchData = async () => {
       const response = await fetch(url);
 
-      if (!response.ok) throw new Error("Could not fetch weather data!");
+      if (!response.ok) throw new Error("Fetching weather data failed!");
 
       const data = await response.json();
 
@@ -101,6 +102,12 @@ export const fetchCityWeather = (lat, lon) => {
         nextDays,
       };
 
+      dispatch(
+        uiActions.showNotification({
+          message: "",
+        })
+      );
+
       return weatherData;
     };
 
@@ -119,7 +126,11 @@ export const fetchCityWeather = (lat, lon) => {
         })
       );
     } catch (error) {
-      console.log(error);
+      dispatch(
+        uiActions.showNotification({
+          message: error.message,
+        })
+      );
     }
   };
 };
