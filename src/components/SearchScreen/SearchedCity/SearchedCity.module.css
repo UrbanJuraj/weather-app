@@ -1,5 +1,6 @@
 .city {
   width: 100%;
+  cursor: pointer;
 }
 
 .city-name {
