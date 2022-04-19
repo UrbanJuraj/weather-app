@@ -20,10 +20,26 @@
   grid-template-rows: repeat(3, 1fr);
   row-gap: 4rem;
   column-gap: 2rem;
+  overflow: hidden;
 }
 
 .next-days {
   display: flex;
   justify-content: space-between;
   width: 90%;
+}
+
+@media (min-width: 38em) {
+  .information {
+    width: 80%;
+    position: static;
+    border-radius: 25px;
+  }
+}
+
+@media (min-width: 62.5em) {
+  .next-days {
+    width: 80%;
+    justify-content: space-around;
+  }
 }

@@ -28,4 +28,25 @@ code {
 .failed-fetch {
   background: linear-gradient(to bottom, #c74343, #e6a7a7);
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 38em) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (min-width: 50em) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media (min-width: 75em) {
+  html {
+    font-size: 110%;
+  }
 }
